@@ -1,0 +1,27 @@
+Black-box testing is a method of software testing that tests the functionality of an application. Recall from the lecture that a 
+way to think about black-box testing is to look at both: 
+
+The possible paths through the specification. 
+The possible boundary cases.
+
+Undoubtably many - if not all - of the listed tests look like they would be pretty good for testing the function size. 
+However, we want you to think critically about the way size is specified - including possible boundary cases - and pick a set of 
+tests that adequately and fully 
+tests all paths and boundary conditions. Be sure the set of tests you pick does not have extraneous, useless, or repetitive tests. 
+
+Explanation: 
+A good black box test suite would contain tests for all of the given conditions! 
+Black-box testing tests the functionality of an application, by looking at the paths through its specifications.
+
+##############################3
+
+Recall from the lecture that a path-complete glass box test suite would find test cases that go through every possible path in the code.
+This is different from black-box testing, because in black-box testing you only have the function specification. 
+For glass-box testing, you actually know how the function you are testing is defined. 
+Thus you can use this definition to figure out how many different paths through the code exist, 
+and then pick a test suite based on that knowledge.
+Undoubtably many - if not all - of the listed tests look like they would be pretty good for testing the function maxOfThree.
+However, we want you to think critically about the way maxOfThree is defined - including possible boundary cases - and pick a set of tests
+that adequately and fully tests all paths and boundary conditions. 
+A good first step will be to look at the function definition and figure out what paths through the code exist. 
+Then, look through the suggested test suites one test at a time and see if the suite tests every single path.

@@ -1,0 +1,14 @@
+# another way to look in dictonaries for the problem 2 in pset4
+
+
+def updateHand(hand, word):
+
+    updated_hand = hand.copy()
+    updated_word = getFrequencyDict(word) # this function turns strings into dictionaries
+
+    for k in updated_hand.keys():
+        if k in updated_word.keys():
+            updated_hand[k] = updated_hand[k] - updated_word[k]
+          
+    
+    return updated_hand
