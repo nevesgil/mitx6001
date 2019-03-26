@@ -1,0 +1,78 @@
+#================================
+
+# 2.1
+'''
+Write a program to calculate the credit card balance after one year if a person only pays the minimum monthly payment required by the credit card company each month.
+'''
+
+def remaining_balance(monthlyPaymentRate, balance, annualInterestRate):
+    '''
+    This function calculates the remaining balance after 12 months
+    of minimum payment. 
+    '''
+    i = 0
+    while i < 12:
+            payment = (monthlyPaymentRate * balance)
+            unpaid = (balance - payment)
+            interest = (annualInterestRate*unpaid/12)
+            balance = unpaid + interest
+            i += 1
+    return round(balance,2)
+
+
+# ==============================================================================
+
+2.2 
+
+def lowest_value(balance, annualInterestRate):
+    
+    value = 0
+    while True:
+        i = 0
+        inbalance = balance
+        while i < 12:
+            payment = value
+            unpaid = (inbalance - payment)
+            interest = (annualInterestRate*unpaid/12)
+            inbalance = unpaid + interest
+            i += 1
+        if inbalance > 0:
+            value = value + 10
+        else:
+            break
+    return (value)
+
+
+# ==========================================================
+
+2.3
+
+balance = 320000
+annualInterestRate = 0.2
+monthlyInterestrate = annualInterestRate/12
+
+
+ub = (balance * (1 + monthlyInterestrate)**12)/12
+lb = balance/12
+value = (ub+lb)/2
+limit = 0.01
+
+while True:
+    value = (ub+lb)/2 
+    i = 0
+    inbalance = balance
+    while i < 12:
+        payment = value
+        unpaid = (inbalance - payment)
+        interest = (monthlyInterestrate*unpaid)
+        inbalance = unpaid + interest
+        i += 1
+    if abs(inbalance - limit) <= limit:
+        break
+    elif inbalance > 0:
+        lb = value
+    elif inbalance < 0:
+            ub = value       
+        
+print("Lowest Payment:" + " " , round(value,2))
+

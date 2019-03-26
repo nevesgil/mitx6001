@@ -1,0 +1,28 @@
+# finger exercises week 2
+
+print("Please think of a number from 0 to 100")
+print("")
+
+answer = ""
+li = 0
+lu = 100
+guess = (lu+li)//2
+
+while answer != 'c':
+    print("Is your secret number " + str(guess) + "?")
+    answer = (input("Enter 'h' to indicate the guess is too high.Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.:  "))
+    if answer not in ("h","l","c"):
+        print(" ")
+        print("Sorry, I did not understand your input.")
+    elif answer == "h":
+        lu = guess
+    elif answer == "l":
+        li = guess
+    elif answer == "c":
+        print(" ")
+        print("Game over. Your secret number was: " + str(guess))
+    guess = (lu + li)//2
+    
+    # ===============================================
+    
+    # TRY BINARY SEARCH FOR NEGATIVE CUBES, CUBES AND X < 1 

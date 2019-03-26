@@ -1,0 +1,41 @@
+# CONVERTING DECIMAL INTEGER TO BINARY
+
+num = 27
+
+if num < 0:
+    isNeg = True
+    num = abs(num)
+else:
+    isNeg = False
+result = ''
+if num == 0:
+    result = '0'
+while num > 0:
+    result = str(num%2) + result
+    num = num//2
+if isNeg:
+    result = '-' + result
+    
+print(result)
+    
+
+# what about floats ???
+
+# if we multiply a decimal number by a power of 2
+# big enough to convert it all to integer...
+# then we convert this integer to binary and divide it back 
+# by the same power of two to have the float we want
+
+# example: 0.375 * (2**3) = 3.0 ... converted into 11 in binary
+# then divide by the same power of two
+# remember, this is now a binary number. so that means this division is 
+# actually shiftting the number to the right how many times the power is
+# in this case, 3 times (2**3)
+# the result then is 0.011
+
+
+
+x = float(input('Enter a decimal number between 0 and 1: '))
+
+p = 0
+while ((2**p)*x)%1 != 0:

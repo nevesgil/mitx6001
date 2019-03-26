@@ -1,0 +1,17 @@
+def isIn(char, aStr):
+    '''
+    char: a single character
+    aStr: an alphabetized string
+    
+    returns: True if char is in aStr; False otherwise
+    '''
+    if len(aStr) == 0:
+        return False
+    elif len(aStr) == 1:
+        return aStr == char
+    else:
+        m = len(aStr)//2 # so it works for odds and even numbers
+        if char < aStr[m]:
+            return isIn(char,aStr[:m])
+        else:
+            return isIn(char, aStr[m:])
