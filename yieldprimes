@@ -1,0 +1,8 @@
+def genPrimes():
+    x = 2
+    primes = []
+    while True:
+        if all(x%p != 0 for p in primes):
+            primes.append(x)
+            yield x
+        x += 1
