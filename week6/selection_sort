@@ -1,0 +1,44 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May 18 20:32:38 2016
+
+@author: ericgrimson
+"""
+
+def selSort(L):
+    for i in range(len(L) - 1):
+        print(L)
+        minIndx = i
+        minVal= L[i]
+        j = i + 1
+        while j < len(L):
+            if minVal > L[j]:
+                minIndx = j
+                minVal= L[j]
+            j += 1
+        temp = L[i]
+        L[i] = L[minIndx]
+        L[minIndx] = temp
+        
+
+test = [1, 5, 3, 8, 4, 9, 6, 2]
+
+#################################################
+
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 21 22:49:10 2016
+
+@author: ericgrimson
+"""
+
+def selection_sort(L):
+    suffixStart = 0
+    while suffixStart != len(L):
+        print(L)
+        for i in range(suffixStart, len(L)):
+            if L[i] < L[suffixStart]:
+                L[suffixStart], L[i] = L[i], L[suffixStart]
+        suffixStart += 1
+        
+test = [1, 5, 3, 8, 4, 9, 6, 2]
