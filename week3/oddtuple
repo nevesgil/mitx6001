@@ -1,0 +1,12 @@
+def oddTuples(aTup):
+    oddt = ()
+    for i in range(len(aTup)):
+        if i%2 == 0:
+            oddt = oddt + (aTup[i],)
+    return oddt
+
+
+
+x = ('I', 'am', 'a', 'test', 'tuple')
+
+z = oddTuples(x)

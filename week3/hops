@@ -1,0 +1,11 @@
+def applyEachTo(L, x):
+    result = []
+    for i in range(len(L)):
+        result.append(L[i](x))
+    return result
+    
+    
+def applyToEach(L, f):
+    for i in range(len(L)):
+        L[i] = f(L[i])
+        

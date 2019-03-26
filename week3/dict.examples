@@ -1,0 +1,21 @@
+animals = { 'a': ['aardvark'], 'b': ['baboon'], 'c': ['coati']}
+
+animals['d'] = ['donkey']
+animals['d'].append('dog')
+animals['d'].append('dingo')
+
+def how_many(aDict):
+    i = 0
+    values = aDict.values()
+    for each in values:
+        i = i + len(each)
+    return i
+
+def biggest(aDict):
+    keys = aDict.keys()
+    biggest = max(aDict.values())
+    for each in aDict.keys():
+        if aDict[each] == biggest:
+            return each
+        
+print(biggest(animals))
